@@ -1,4 +1,4 @@
-import { Layout, Typography } from 'antd';
+import { Layout } from 'antd';
 
 const { Footer } = Layout;
 
@@ -15,9 +15,7 @@ const FooterStyle: React.CSSProperties = {
   flexDirection: 'column'
 }
 
-type Props = {}
-
-const FooterLayout: React.FC<Props> = (props: Props) => {
+const FooterLayout: React.FC = () => {
   return (
     <Footer style={FooterStyle}>
         <p style={{ fontSize: '16px' }}>THE BIGGEST ONLINE GIFT STORE IN THAILAND With Excellent service team and Delivery.</p>

@@ -17,7 +17,6 @@ import {
 import { RcFile, UploadProps } from "antd/es/upload";
 import { useAddProductMutation } from "@/redux/services/productApi";
 import { useAppSelector } from "@/redux/store";
-import { useNavigate } from "react-router-dom";
 
 const { Option } = Select;
 
@@ -54,8 +53,6 @@ type Props = {
 };
 
 const CreateProduct = ({ open, onClose }: Props) => {
-  const [form] = Form.useForm();
-  const navigation = useNavigate();
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
   const [previewTitle, setPreviewTitle] = useState("");
