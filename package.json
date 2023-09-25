@@ -4,10 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "vite": "vite",
+    "server": "nodemon server.cjs",
+    "dev": "concurrently \"npm:server\" \"npm:vite\"",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -s dist",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
@@ -22,7 +26,8 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
     "react-responsive": "^9.0.2",
-    "react-router-dom": "^6.16.0"
+    "react-router-dom": "^6.16.0",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.2",
